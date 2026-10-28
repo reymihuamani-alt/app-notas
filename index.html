@@ -2,21 +2,45 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>notas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis notas</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <h4>APP DE NOTAS</h4>
-  <input id="nota" placeholder="Nota">
-  <select id="categoria">
-    <option>Estudio</option> <option>Trabajo</option> <option>Personal</option>
-    <option>Casa</option> <option>Salud</option> <option>Compras</option>
-    <option>Ideas</option> <option>Viajes</option> <option>Finanzas</option>
-    <option>Otros</option>
-  </select>
-  <button id="agregar">ok</button>
-  <ul id="lista"></ul>
-  <a href="#" id="borrar">BORRAR TODO</a>
+  <main class="tarjeta">
+    <h1>Mis notas</h1>
+    <p class="ayuda">Escribe una nota y elige una categoría.</p>
+
+    <form id="formulario">
+      <fieldset>
+        <legend>1. Tu nota</legend>
+        <label for="nota">Escribe tu nota</label>
+        <input id="nota" type="text" maxlength="120" autocomplete="off" required>
+        <p class="ayuda">El botón se activa cuando escribes algo.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>2. Categoría</legend>
+        <label for="categoria">Elige una categoría</label>
+        <select id="categoria">
+          <option>Estudio</option>
+          <option>Trabajo</option>
+          <option>Personal</option>
+        </select>
+      </fieldset>
+
+      <button type="submit" id="agregar" class="boton-principal" disabled>Agregar nota</button>
+    </form>
+
+    <p id="mensaje" class="mensaje" role="status"></p>
+
+    <section>
+      <h2>Tus notas <span id="contador" class="etiqueta">0 notas</span></h2>
+      <p id="vacio" class="ayuda">Aún no tienes notas. ¡Agrega la primera!</p>
+      <ul id="lista" class="lista"></ul>
+      <button type="button" id="borrar-todo" class="boton-secundario" disabled>Eliminar todas las notas</button>
+    </section>
+  </main>
   <script src="app.js"></script>
 </body>
 </html>

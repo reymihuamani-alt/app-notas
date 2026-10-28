@@ -26,4 +26,4 @@
 
 | Antes | Después |
 |-------|---------|
-| ![Antes](img/Ligthouse.png) | ![Después](img/lighthouse-despues.png) |
+| ![Antes](img/LightHousse.png) | ![Después](img/lighthouse-despues.png) |
